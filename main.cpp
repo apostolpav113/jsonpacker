@@ -1,14 +1,7 @@
 #include <iostream>
 #include <fstream>
-#include <map>
-#include <unordered_map>
-#include <unordered_set>
 #include <boost/filesystem/operations.hpp>
 #include <boost/format.hpp>
-#include <boost/archive/binary_oarchive.hpp>
-#include "rapidjson/document.h"
-#include "rapidjson/error/error.h"
-#include "rapidjson/error/en.h"
 
 #include "coder.h"
 #include "appoptions.h"
