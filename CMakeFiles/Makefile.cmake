@@ -44,5 +44,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/json_packer_tests.dir/DependInfo.cmake"
   "CMakeFiles/json_packer.dir/DependInfo.cmake"
   )

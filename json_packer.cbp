@@ -27,6 +27,56 @@
             <DistClean command="/usr/bin/make -f &quot;/home/apostol/c++/JsonPacker/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
+      <Target title="json_packer_tests">
+         <Option output="/home/apostol/c++/JsonPacker/json_packer_tests" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/apostol/c++/JsonPacker" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/apostol/c++/JsonPacker/include" />
+            <Add directory="/home/apostol/c++/JsonPacker/include/googletest/googletest/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/apostol/c++/JsonPacker/Makefile&quot;  VERBOSE=1 json_packer_tests" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/apostol/c++/JsonPacker/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/apostol/c++/JsonPacker/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/apostol/c++/JsonPacker/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="json_packer_tests/fast">
+         <Option output="/home/apostol/c++/JsonPacker/json_packer_tests" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/apostol/c++/JsonPacker" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/apostol/c++/JsonPacker/include" />
+            <Add directory="/home/apostol/c++/JsonPacker/include/googletest/googletest/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/apostol/c++/JsonPacker/Makefile&quot;  VERBOSE=1 json_packer_tests/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/apostol/c++/JsonPacker/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/apostol/c++/JsonPacker/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/apostol/c++/JsonPacker/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
       <Target title="edit_cache">
          <Option working_dir="/home/apostol/c++/JsonPacker" />
          <Option type="4" />
@@ -45,6 +95,7 @@
          <Option compiler="gcc" />
          <Compiler>
             <Add directory="/home/apostol/c++/JsonPacker/include" />
+            <Add directory="/home/apostol/c++/JsonPacker/include/googletest/googletest/include" />
             <Add directory="/usr/include" />
             <Add directory="/usr/include/c++/5" />
             <Add directory="/usr/include/c++/5/backward" />
@@ -69,6 +120,7 @@
          <Option compiler="gcc" />
          <Compiler>
             <Add directory="/home/apostol/c++/JsonPacker/include" />
+            <Add directory="/home/apostol/c++/JsonPacker/include/googletest/googletest/include" />
             <Add directory="/usr/include" />
             <Add directory="/usr/include/c++/5" />
             <Add directory="/usr/include/c++/5/backward" />
@@ -112,6 +164,9 @@
       </Unit>
       <Unit filename="/home/apostol/c++/JsonPacker/packerstream.h">
          <Option target="json_packer"/>
+      </Unit>
+      <Unit filename="/home/apostol/c++/JsonPacker/tests/main.cpp">
+         <Option target="json_packer_tests"/>
       </Unit>
       <Unit filename="/home/apostol/c++/JsonPacker/utils.cpp">
          <Option target="json_packer"/>

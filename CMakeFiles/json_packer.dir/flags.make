@@ -6,5 +6,5 @@ CXX_FLAGS =  -std=c++11 -g
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/apostol/c++/JsonPacker/include 
+CXX_INCLUDES = -I/home/apostol/c++/JsonPacker/include -I/home/apostol/c++/JsonPacker/include/googletest/googletest/include 
 

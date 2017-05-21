@@ -60,6 +60,43 @@ CMAKE_SOURCE_DIR = /home/apostol/c++/JsonPacker
 CMAKE_BINARY_DIR = /home/apostol/c++/JsonPacker
 
 #=============================================================================
+# Target rules for target CMakeFiles/json_packer_tests.dir
+
+# All Build rule for target.
+CMakeFiles/json_packer_tests.dir/all:
+	$(MAKE) -f CMakeFiles/json_packer_tests.dir/build.make CMakeFiles/json_packer_tests.dir/depend
+	$(MAKE) -f CMakeFiles/json_packer_tests.dir/build.make CMakeFiles/json_packer_tests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/apostol/c++/JsonPacker/CMakeFiles --progress-num=8,9 "Built target json_packer_tests"
+.PHONY : CMakeFiles/json_packer_tests.dir/all
+
+# Include target in all.
+all: CMakeFiles/json_packer_tests.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/json_packer_tests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/apostol/c++/JsonPacker/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/json_packer_tests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/apostol/c++/JsonPacker/CMakeFiles 0
+.PHONY : CMakeFiles/json_packer_tests.dir/rule
+
+# Convenience name for target.
+json_packer_tests: CMakeFiles/json_packer_tests.dir/rule
+
+.PHONY : json_packer_tests
+
+# clean rule for target.
+CMakeFiles/json_packer_tests.dir/clean:
+	$(MAKE) -f CMakeFiles/json_packer_tests.dir/build.make CMakeFiles/json_packer_tests.dir/clean
+.PHONY : CMakeFiles/json_packer_tests.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/json_packer_tests.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/json_packer.dir
 
 # All Build rule for target.

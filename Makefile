@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named json_packer_tests
+
+# Build rule for target.
+json_packer_tests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 json_packer_tests
+.PHONY : json_packer_tests
+
+# fast build rule for target.
+json_packer_tests/fast:
+	$(MAKE) -f CMakeFiles/json_packer_tests.dir/build.make CMakeFiles/json_packer_tests.dir/build
+.PHONY : json_packer_tests/fast
+
+#=============================================================================
 # Target rules for targets named json_packer
 
 # Build rule for target.
@@ -258,6 +271,33 @@ packerstream.cpp.s:
 	$(MAKE) -f CMakeFiles/json_packer.dir/build.make CMakeFiles/json_packer.dir/packerstream.cpp.s
 .PHONY : packerstream.cpp.s
 
+tests/main.o: tests/main.cpp.o
+
+.PHONY : tests/main.o
+
+# target to build an object file
+tests/main.cpp.o:
+	$(MAKE) -f CMakeFiles/json_packer_tests.dir/build.make CMakeFiles/json_packer_tests.dir/tests/main.cpp.o
+.PHONY : tests/main.cpp.o
+
+tests/main.i: tests/main.cpp.i
+
+.PHONY : tests/main.i
+
+# target to preprocess a source file
+tests/main.cpp.i:
+	$(MAKE) -f CMakeFiles/json_packer_tests.dir/build.make CMakeFiles/json_packer_tests.dir/tests/main.cpp.i
+.PHONY : tests/main.cpp.i
+
+tests/main.s: tests/main.cpp.s
+
+.PHONY : tests/main.s
+
+# target to generate assembly for a file
+tests/main.cpp.s:
+	$(MAKE) -f CMakeFiles/json_packer_tests.dir/build.make CMakeFiles/json_packer_tests.dir/tests/main.cpp.s
+.PHONY : tests/main.cpp.s
+
 utils.o: utils.cpp.o
 
 .PHONY : utils.o
@@ -292,6 +332,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... json_packer_tests"
 	@echo "... edit_cache"
 	@echo "... json_packer"
 	@echo "... appoptions.o"
@@ -309,6 +350,9 @@ help:
 	@echo "... packerstream.o"
 	@echo "... packerstream.i"
 	@echo "... packerstream.s"
+	@echo "... tests/main.o"
+	@echo "... tests/main.i"
+	@echo "... tests/main.s"
 	@echo "... utils.o"
 	@echo "... utils.i"
 	@echo "... utils.s"

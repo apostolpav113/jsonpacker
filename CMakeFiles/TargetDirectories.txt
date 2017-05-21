@@ -1,3 +1,4 @@
 /home/apostol/c++/JsonPacker/CMakeFiles/rebuild_cache.dir
+/home/apostol/c++/JsonPacker/CMakeFiles/json_packer_tests.dir
 /home/apostol/c++/JsonPacker/CMakeFiles/edit_cache.dir
 /home/apostol/c++/JsonPacker/CMakeFiles/json_packer.dir
