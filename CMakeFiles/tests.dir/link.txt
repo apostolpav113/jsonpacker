@@ -1,1 +1,0 @@
-/usr/bin/g++    -std=c++11 -g   CMakeFiles/tests.dir/tests/main.cpp.o  -o tests  -L/usr/local/lib -rdynamic 
