@@ -80,14 +80,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/apostol/c++/JsonPacker/CMakeFiles /home/apostol/c++/JsonPacker/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /home/apostol/c++/JsonPacker && $(CMAKE_COMMAND) -E cmake_progress_start /home/apostol/c++/JsonPacker/CMakeFiles /home/apostol/c++/JsonPacker/tests/CMakeFiles/progress.marks
+	cd /home/apostol/c++/JsonPacker && $(MAKE) -f CMakeFiles/Makefile2 tests/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/apostol/c++/JsonPacker/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/apostol/c++/JsonPacker && $(MAKE) -f CMakeFiles/Makefile2 tests/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,44 +97,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/apostol/c++/JsonPacker && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/apostol/c++/JsonPacker && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/apostol/c++/JsonPacker && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named json_packer
+# Convenience name for target.
+tests/CMakeFiles/json_packer_tests.dir/rule:
+	cd /home/apostol/c++/JsonPacker && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/json_packer_tests.dir/rule
+.PHONY : tests/CMakeFiles/json_packer_tests.dir/rule
 
-# Build rule for target.
-json_packer: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 json_packer
-.PHONY : json_packer
+# Convenience name for target.
+json_packer_tests: tests/CMakeFiles/json_packer_tests.dir/rule
 
-# fast build rule for target.
-json_packer/fast:
-	$(MAKE) -f src/CMakeFiles/json_packer.dir/build.make src/CMakeFiles/json_packer.dir/build
-.PHONY : json_packer/fast
-
-#=============================================================================
-# Target rules for targets named json_packer_tests
-
-# Build rule for target.
-json_packer_tests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 json_packer_tests
 .PHONY : json_packer_tests
 
 # fast build rule for target.
 json_packer_tests/fast:
-	$(MAKE) -f tests/CMakeFiles/json_packer_tests.dir/build.make tests/CMakeFiles/json_packer_tests.dir/build
+	cd /home/apostol/c++/JsonPacker && $(MAKE) -f tests/CMakeFiles/json_packer_tests.dir/build.make tests/CMakeFiles/json_packer_tests.dir/build
 .PHONY : json_packer_tests/fast
+
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	cd /home/apostol/c++/JsonPacker && $(MAKE) -f tests/CMakeFiles/json_packer_tests.dir/build.make tests/CMakeFiles/json_packer_tests.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	cd /home/apostol/c++/JsonPacker && $(MAKE) -f tests/CMakeFiles/json_packer_tests.dir/build.make tests/CMakeFiles/json_packer_tests.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	cd /home/apostol/c++/JsonPacker && $(MAKE) -f tests/CMakeFiles/json_packer_tests.dir/build.make tests/CMakeFiles/json_packer_tests.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -144,8 +160,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... json_packer"
 	@echo "... json_packer_tests"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 
@@ -157,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/apostol/c++/JsonPacker && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

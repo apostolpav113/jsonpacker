@@ -126,7 +126,7 @@ CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 CMAKE_PREFIX_PATH:STRING=/home/apostol/Qt/5.8/gcc_64
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=json_packer
+CMAKE_PROJECT_NAME:STATIC=Project
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -177,14 +177,20 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Value Computed by CMake
+Project_BINARY_DIR:STATIC=/home/apostol/c++/JsonPacker
+
+//Value Computed by CMake
+Project_SOURCE_DIR:STATIC=/home/apostol/c++/JsonPacker
+
 //No help, variable specified on the command line.
 QT_QMAKE_EXECUTABLE:STRING=/home/apostol/Qt/5.8/gcc_64/bin/qmake
 
 //Value Computed by CMake
-json_packer_BINARY_DIR:STATIC=/home/apostol/c++/JsonPacker
+json_packer_BINARY_DIR:STATIC=/home/apostol/c++/JsonPacker/src
 
 //Value Computed by CMake
-json_packer_SOURCE_DIR:STATIC=/home/apostol/c++/JsonPacker
+json_packer_SOURCE_DIR:STATIC=/home/apostol/c++/JsonPacker/src
 
 
 ########################
@@ -289,7 +295,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

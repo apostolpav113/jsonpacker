@@ -1,0 +1,1 @@
+/usr/bin/g++    -std=c++11 -g   CMakeFiles/json_packer_tests.dir/tests/main.cpp.o  -o json_packer_tests  -L/usr/local/lib  -Linclude/googletest/build/googlemock/gtest -rdynamic -lgtest -Wl,-rpath,/usr/local/lib:include/googletest/build/googlemock/gtest 
