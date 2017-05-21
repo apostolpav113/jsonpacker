@@ -125,6 +125,33 @@ json_packer/fast:
 	cd /home/apostol/c++/JsonPacker && $(MAKE) -f src/CMakeFiles/json_packer.dir/build.make src/CMakeFiles/json_packer.dir/build
 .PHONY : json_packer/fast
 
+apperror.o: apperror.cpp.o
+
+.PHONY : apperror.o
+
+# target to build an object file
+apperror.cpp.o:
+	cd /home/apostol/c++/JsonPacker && $(MAKE) -f src/CMakeFiles/json_packer.dir/build.make src/CMakeFiles/json_packer.dir/apperror.cpp.o
+.PHONY : apperror.cpp.o
+
+apperror.i: apperror.cpp.i
+
+.PHONY : apperror.i
+
+# target to preprocess a source file
+apperror.cpp.i:
+	cd /home/apostol/c++/JsonPacker && $(MAKE) -f src/CMakeFiles/json_packer.dir/build.make src/CMakeFiles/json_packer.dir/apperror.cpp.i
+.PHONY : apperror.cpp.i
+
+apperror.s: apperror.cpp.s
+
+.PHONY : apperror.s
+
+# target to generate assembly for a file
+apperror.cpp.s:
+	cd /home/apostol/c++/JsonPacker && $(MAKE) -f src/CMakeFiles/json_packer.dir/build.make src/CMakeFiles/json_packer.dir/apperror.cpp.s
+.PHONY : apperror.cpp.s
+
 appoptions.o: appoptions.cpp.o
 
 .PHONY : appoptions.o
@@ -178,33 +205,6 @@ coder.s: coder.cpp.s
 coder.cpp.s:
 	cd /home/apostol/c++/JsonPacker && $(MAKE) -f src/CMakeFiles/json_packer.dir/build.make src/CMakeFiles/json_packer.dir/coder.cpp.s
 .PHONY : coder.cpp.s
-
-error.o: error.cpp.o
-
-.PHONY : error.o
-
-# target to build an object file
-error.cpp.o:
-	cd /home/apostol/c++/JsonPacker && $(MAKE) -f src/CMakeFiles/json_packer.dir/build.make src/CMakeFiles/json_packer.dir/error.cpp.o
-.PHONY : error.cpp.o
-
-error.i: error.cpp.i
-
-.PHONY : error.i
-
-# target to preprocess a source file
-error.cpp.i:
-	cd /home/apostol/c++/JsonPacker && $(MAKE) -f src/CMakeFiles/json_packer.dir/build.make src/CMakeFiles/json_packer.dir/error.cpp.i
-.PHONY : error.cpp.i
-
-error.s: error.cpp.s
-
-.PHONY : error.s
-
-# target to generate assembly for a file
-error.cpp.s:
-	cd /home/apostol/c++/JsonPacker && $(MAKE) -f src/CMakeFiles/json_packer.dir/build.make src/CMakeFiles/json_packer.dir/error.cpp.s
-.PHONY : error.cpp.s
 
 main.o: main.cpp.o
 
@@ -296,15 +296,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... json_packer"
+	@echo "... apperror.o"
+	@echo "... apperror.i"
+	@echo "... apperror.s"
 	@echo "... appoptions.o"
 	@echo "... appoptions.i"
 	@echo "... appoptions.s"
 	@echo "... coder.o"
 	@echo "... coder.i"
 	@echo "... coder.s"
-	@echo "... error.o"
-	@echo "... error.i"
-	@echo "... error.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
