@@ -125,6 +125,60 @@ json_packer_tests/fast:
 	cd /home/apostol/c++/JsonPacker && $(MAKE) -f tests/CMakeFiles/json_packer_tests.dir/build.make tests/CMakeFiles/json_packer_tests.dir/build
 .PHONY : json_packer_tests/fast
 
+__/src/apperror.o: __/src/apperror.cpp.o
+
+.PHONY : __/src/apperror.o
+
+# target to build an object file
+__/src/apperror.cpp.o:
+	cd /home/apostol/c++/JsonPacker && $(MAKE) -f tests/CMakeFiles/json_packer_tests.dir/build.make tests/CMakeFiles/json_packer_tests.dir/__/src/apperror.cpp.o
+.PHONY : __/src/apperror.cpp.o
+
+__/src/apperror.i: __/src/apperror.cpp.i
+
+.PHONY : __/src/apperror.i
+
+# target to preprocess a source file
+__/src/apperror.cpp.i:
+	cd /home/apostol/c++/JsonPacker && $(MAKE) -f tests/CMakeFiles/json_packer_tests.dir/build.make tests/CMakeFiles/json_packer_tests.dir/__/src/apperror.cpp.i
+.PHONY : __/src/apperror.cpp.i
+
+__/src/apperror.s: __/src/apperror.cpp.s
+
+.PHONY : __/src/apperror.s
+
+# target to generate assembly for a file
+__/src/apperror.cpp.s:
+	cd /home/apostol/c++/JsonPacker && $(MAKE) -f tests/CMakeFiles/json_packer_tests.dir/build.make tests/CMakeFiles/json_packer_tests.dir/__/src/apperror.cpp.s
+.PHONY : __/src/apperror.cpp.s
+
+__/src/utils.o: __/src/utils.cpp.o
+
+.PHONY : __/src/utils.o
+
+# target to build an object file
+__/src/utils.cpp.o:
+	cd /home/apostol/c++/JsonPacker && $(MAKE) -f tests/CMakeFiles/json_packer_tests.dir/build.make tests/CMakeFiles/json_packer_tests.dir/__/src/utils.cpp.o
+.PHONY : __/src/utils.cpp.o
+
+__/src/utils.i: __/src/utils.cpp.i
+
+.PHONY : __/src/utils.i
+
+# target to preprocess a source file
+__/src/utils.cpp.i:
+	cd /home/apostol/c++/JsonPacker && $(MAKE) -f tests/CMakeFiles/json_packer_tests.dir/build.make tests/CMakeFiles/json_packer_tests.dir/__/src/utils.cpp.i
+.PHONY : __/src/utils.cpp.i
+
+__/src/utils.s: __/src/utils.cpp.s
+
+.PHONY : __/src/utils.s
+
+# target to generate assembly for a file
+__/src/utils.cpp.s:
+	cd /home/apostol/c++/JsonPacker && $(MAKE) -f tests/CMakeFiles/json_packer_tests.dir/build.make tests/CMakeFiles/json_packer_tests.dir/__/src/utils.cpp.s
+.PHONY : __/src/utils.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -152,6 +206,33 @@ main.cpp.s:
 	cd /home/apostol/c++/JsonPacker && $(MAKE) -f tests/CMakeFiles/json_packer_tests.dir/build.make tests/CMakeFiles/json_packer_tests.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+utils_tests.o: utils_tests.cpp.o
+
+.PHONY : utils_tests.o
+
+# target to build an object file
+utils_tests.cpp.o:
+	cd /home/apostol/c++/JsonPacker && $(MAKE) -f tests/CMakeFiles/json_packer_tests.dir/build.make tests/CMakeFiles/json_packer_tests.dir/utils_tests.cpp.o
+.PHONY : utils_tests.cpp.o
+
+utils_tests.i: utils_tests.cpp.i
+
+.PHONY : utils_tests.i
+
+# target to preprocess a source file
+utils_tests.cpp.i:
+	cd /home/apostol/c++/JsonPacker && $(MAKE) -f tests/CMakeFiles/json_packer_tests.dir/build.make tests/CMakeFiles/json_packer_tests.dir/utils_tests.cpp.i
+.PHONY : utils_tests.cpp.i
+
+utils_tests.s: utils_tests.cpp.s
+
+.PHONY : utils_tests.s
+
+# target to generate assembly for a file
+utils_tests.cpp.s:
+	cd /home/apostol/c++/JsonPacker && $(MAKE) -f tests/CMakeFiles/json_packer_tests.dir/build.make tests/CMakeFiles/json_packer_tests.dir/utils_tests.cpp.s
+.PHONY : utils_tests.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -161,9 +242,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... json_packer_tests"
+	@echo "... __/src/apperror.o"
+	@echo "... __/src/apperror.i"
+	@echo "... __/src/apperror.s"
+	@echo "... __/src/utils.o"
+	@echo "... __/src/utils.i"
+	@echo "... __/src/utils.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... utils_tests.o"
+	@echo "... utils_tests.i"
+	@echo "... utils_tests.s"
 .PHONY : help
 
 

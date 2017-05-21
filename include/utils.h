@@ -32,6 +32,9 @@ public:
 			throw app_err::JsonPackerMissed("creator", name);
 		return m_creators[name]->Create();
 	}
+	void Clear() {
+		m_creators.clear();
+	}
 	static Ptr Instance() {
 		static Ptr instance;
 		if (!instance)
