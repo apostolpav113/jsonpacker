@@ -10,8 +10,6 @@
 #include "packerstream.h"
 #include "apperror.h"
 
-#include <iostream>
-
 namespace jsonpacker_coder {
 
 using namespace jsonpacker_stream;
@@ -154,7 +152,6 @@ public:
 		switch (Type()) {
 		case TlvRecordType::rtInt:
 			v.SetInt(*(reinterpret_cast<int*>(m_data.data())));
-			std::cout << "vval = " << v.GetInt() << std::endl;
 			break;
 		case TlvRecordType::rtUInt:
 			v.SetUint(*(reinterpret_cast<unsigned int*>(m_data.data())));
@@ -180,7 +177,6 @@ public:
 		case TlvRecordType::rtString:
 			m_data.push_back(0);
 			v.SetString(m_data.data(), m_data.size() - 1, allocator);
-			std::cout << "vval = " << v.GetString() << std::endl;
 			break;
 		default:
 			throw app_err::JsonPackerError("Unknown data type!");
@@ -213,12 +209,21 @@ private:
 template<typename SizeType>
 std::istream& operator >> (std::istream &is, TlvRecord<SizeType> &record) {
 	is.read(&record.CharType(), 1);
-	is.read(reinterpret_cast<char*>(&record.DataSize()), sizeof(SizeType));
-	if (!record.IgnoreDataOnRead()) {
-		record.Data().resize(static_cast<unsigned long>(record.DataSize()));
-		is.read(record.Data().data(), record.DataSize());
-	} else
-		is.seekg(record.DataSize(), std::ios::cur);
+	if (!is.eof()) {
+		bool failed_read = false;
+		try {
+			is.read(reinterpret_cast<char*>(&record.DataSize()), sizeof(SizeType));
+			if (!record.IgnoreDataOnRead()) {
+				record.Data().resize(static_cast<unsigned long>(record.DataSize()));
+				is.read(record.Data().data(), record.DataSize());
+			} else
+				is.seekg(record.DataSize(), std::ios::cur);
+		} catch (...) {
+			failed_read = true;
+		}
+		if (is.fail() || is.eof() || failed_read)
+			throw TlvInvalidFormatError();
+	}
 	return is;
 }
 
