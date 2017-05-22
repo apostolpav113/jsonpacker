@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 		}
 
 		if (boost::filesystem::exists(app_options.OutputFile.Value()) && !app_options.Force.Exists()) {
-			throw app_err::JsonPackerFileExists(app_options.InputFile.Value());
+			throw app_err::JsonPackerFileExists(app_options.OutputFile.Value());
 			return EXIT_FAILURE;
 		}
 
