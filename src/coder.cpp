@@ -49,7 +49,7 @@ std::string JsonKeyDictionary::operator [](int index) {
 		if (key_pair.second == index)
 			return key_pair.first;
 	}
-	return "";
+	throw app_err::JsonPackerMissed("dictionary key", std::to_string(index));
 }
 
 void JsonKeyDictionary::Clear() {
@@ -128,24 +128,36 @@ void TlvToJson::Run(JsonPackerStream &stream) {
 	record.SetIgnoreDataOnRead(true);
 	std::string dictionary_key;
 	int dictionary_index;
+	bool wait_for_string = true;
 	while (!stream.InputStream().eof()) {
 		stream.InputStream() >> record;
 		if (stream.InputStream().eof())
 			break;
+
 		if (record.Type() == TlvType::rtDictionary) {
 			dictionary_found = true;
 			record.SetIgnoreDataOnRead(false);
 			continue;
 		}
-		if (dictionary_found && record.Type() == TlvType::rtString) {
-			dictionary_key = record.GetString();
-		} else
-		if (dictionary_found && record.Type() == TlvType::rtInt) {
-			dictionary_index = record.GetInt();
-			m_dictionary->AddKey(dictionary_key, dictionary_index);
+		if (dictionary_found) {
+			//check format
+			if ((wait_for_string && record.Type() != TlvType::rtString) ||
+				(!wait_for_string && record.Type() != TlvType::rtInt))
+			{
+				throw TlvInvalidFormatError();
+			}
+			if (record.Type() == TlvType::rtString) {
+				dictionary_key = record.GetString();
+				wait_for_string = false;
+			}
+			else if (record.Type() == TlvType::rtInt) {
+				dictionary_index = record.GetInt();
+				m_dictionary->AddKey(dictionary_key, dictionary_index);
+				wait_for_string = true;
+			}
 		}
 	}
-	if (!dictionary_found)
+	if (!dictionary_found || m_dictionary->Keys().empty())
 		throw app_err::JsonPackerMissed("dictionary", "");
 
 	//read and convert data
