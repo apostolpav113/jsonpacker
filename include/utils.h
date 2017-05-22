@@ -13,7 +13,7 @@ namespace util {
 			util::Factory<base>::Instance()->Register<type>(name); \
 		} \
 	}; \
-	extern reg_name_##type reg_name_##type##_object
+	reg_name_##type reg_name_##type##_object
 
 template<class Base>
 class Factory {
