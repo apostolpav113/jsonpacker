@@ -82,10 +82,6 @@ void JsonToTlv::Run(JsonPackerStream &stream) {
 	std::string line;
 	int line_number = 0;
 	while (getline(stream.InputStream(), line)) {
-		if (line.find("TRUE") != std::string::npos)
-			line = str::Replace(line, "TRUE", "true");
-		if (line.find("FALSE") != std::string::npos)
-			line = str::Replace(line, "FALSE", "false");
 		++line_number;
 		rapidjson::Document json_doc;
 		rapidjson::ParseResult ok = json_doc.Parse(line.c_str());
