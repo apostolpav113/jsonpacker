@@ -152,6 +152,60 @@ __/src/apperror.cpp.s:
 	cd /home/apostol/c++/JsonPacker && $(MAKE) -f tests/CMakeFiles/json_packer_tests.dir/build.make tests/CMakeFiles/json_packer_tests.dir/__/src/apperror.cpp.s
 .PHONY : __/src/apperror.cpp.s
 
+__/src/coder.o: __/src/coder.cpp.o
+
+.PHONY : __/src/coder.o
+
+# target to build an object file
+__/src/coder.cpp.o:
+	cd /home/apostol/c++/JsonPacker && $(MAKE) -f tests/CMakeFiles/json_packer_tests.dir/build.make tests/CMakeFiles/json_packer_tests.dir/__/src/coder.cpp.o
+.PHONY : __/src/coder.cpp.o
+
+__/src/coder.i: __/src/coder.cpp.i
+
+.PHONY : __/src/coder.i
+
+# target to preprocess a source file
+__/src/coder.cpp.i:
+	cd /home/apostol/c++/JsonPacker && $(MAKE) -f tests/CMakeFiles/json_packer_tests.dir/build.make tests/CMakeFiles/json_packer_tests.dir/__/src/coder.cpp.i
+.PHONY : __/src/coder.cpp.i
+
+__/src/coder.s: __/src/coder.cpp.s
+
+.PHONY : __/src/coder.s
+
+# target to generate assembly for a file
+__/src/coder.cpp.s:
+	cd /home/apostol/c++/JsonPacker && $(MAKE) -f tests/CMakeFiles/json_packer_tests.dir/build.make tests/CMakeFiles/json_packer_tests.dir/__/src/coder.cpp.s
+.PHONY : __/src/coder.cpp.s
+
+__/src/packerstream.o: __/src/packerstream.cpp.o
+
+.PHONY : __/src/packerstream.o
+
+# target to build an object file
+__/src/packerstream.cpp.o:
+	cd /home/apostol/c++/JsonPacker && $(MAKE) -f tests/CMakeFiles/json_packer_tests.dir/build.make tests/CMakeFiles/json_packer_tests.dir/__/src/packerstream.cpp.o
+.PHONY : __/src/packerstream.cpp.o
+
+__/src/packerstream.i: __/src/packerstream.cpp.i
+
+.PHONY : __/src/packerstream.i
+
+# target to preprocess a source file
+__/src/packerstream.cpp.i:
+	cd /home/apostol/c++/JsonPacker && $(MAKE) -f tests/CMakeFiles/json_packer_tests.dir/build.make tests/CMakeFiles/json_packer_tests.dir/__/src/packerstream.cpp.i
+.PHONY : __/src/packerstream.cpp.i
+
+__/src/packerstream.s: __/src/packerstream.cpp.s
+
+.PHONY : __/src/packerstream.s
+
+# target to generate assembly for a file
+__/src/packerstream.cpp.s:
+	cd /home/apostol/c++/JsonPacker && $(MAKE) -f tests/CMakeFiles/json_packer_tests.dir/build.make tests/CMakeFiles/json_packer_tests.dir/__/src/packerstream.cpp.s
+.PHONY : __/src/packerstream.cpp.s
+
 __/src/utils.o: __/src/utils.cpp.o
 
 .PHONY : __/src/utils.o
@@ -178,6 +232,33 @@ __/src/utils.s: __/src/utils.cpp.s
 __/src/utils.cpp.s:
 	cd /home/apostol/c++/JsonPacker && $(MAKE) -f tests/CMakeFiles/json_packer_tests.dir/build.make tests/CMakeFiles/json_packer_tests.dir/__/src/utils.cpp.s
 .PHONY : __/src/utils.cpp.s
+
+jsoncoder_tests.o: jsoncoder_tests.cpp.o
+
+.PHONY : jsoncoder_tests.o
+
+# target to build an object file
+jsoncoder_tests.cpp.o:
+	cd /home/apostol/c++/JsonPacker && $(MAKE) -f tests/CMakeFiles/json_packer_tests.dir/build.make tests/CMakeFiles/json_packer_tests.dir/jsoncoder_tests.cpp.o
+.PHONY : jsoncoder_tests.cpp.o
+
+jsoncoder_tests.i: jsoncoder_tests.cpp.i
+
+.PHONY : jsoncoder_tests.i
+
+# target to preprocess a source file
+jsoncoder_tests.cpp.i:
+	cd /home/apostol/c++/JsonPacker && $(MAKE) -f tests/CMakeFiles/json_packer_tests.dir/build.make tests/CMakeFiles/json_packer_tests.dir/jsoncoder_tests.cpp.i
+.PHONY : jsoncoder_tests.cpp.i
+
+jsoncoder_tests.s: jsoncoder_tests.cpp.s
+
+.PHONY : jsoncoder_tests.s
+
+# target to generate assembly for a file
+jsoncoder_tests.cpp.s:
+	cd /home/apostol/c++/JsonPacker && $(MAKE) -f tests/CMakeFiles/json_packer_tests.dir/build.make tests/CMakeFiles/json_packer_tests.dir/jsoncoder_tests.cpp.s
+.PHONY : jsoncoder_tests.cpp.s
 
 main.o: main.cpp.o
 
@@ -245,9 +326,18 @@ help:
 	@echo "... __/src/apperror.o"
 	@echo "... __/src/apperror.i"
 	@echo "... __/src/apperror.s"
+	@echo "... __/src/coder.o"
+	@echo "... __/src/coder.i"
+	@echo "... __/src/coder.s"
+	@echo "... __/src/packerstream.o"
+	@echo "... __/src/packerstream.i"
+	@echo "... __/src/packerstream.s"
 	@echo "... __/src/utils.o"
 	@echo "... __/src/utils.i"
 	@echo "... __/src/utils.s"
+	@echo "... jsoncoder_tests.o"
+	@echo "... jsoncoder_tests.i"
+	@echo "... jsoncoder_tests.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
