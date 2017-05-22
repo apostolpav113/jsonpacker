@@ -1,3 +1,14 @@
+/**
+  @file
+  @brief Main program module
+
+  Program code depends on RapidJson library, Boost library and Google Test library.
+
+  This file contain main() function that parse command arguments with app_opt::ApplicationOptions class,
+  retreives JsonToTlv or TlvToJson class instance and than run coding/uncoding process
+
+  **/
+
 #include <iostream>
 #include <fstream>
 #include <boost/filesystem/operations.hpp>
