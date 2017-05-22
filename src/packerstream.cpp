@@ -21,7 +21,7 @@ std::ostream &JsonPackerFileStream::OutputStream() {
 	return m_output_stream;
 }
 
-JsonPackerStringStream::JsonPackerStringStream(std::istringstream &input_stream, std::ostringstream &output_stream)
+JsonPackerStringStream::JsonPackerStringStream(std::stringstream &input_stream, std::stringstream &output_stream)
 	: JsonPackerStream()
 	, m_input_stream(input_stream)
 	, m_output_stream(output_stream)

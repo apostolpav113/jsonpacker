@@ -26,13 +26,13 @@ private:
 
 class JsonPackerStringStream : public JsonPackerStream {
 public:
-	JsonPackerStringStream(std::istringstream& input_stream, std::ostringstream& output_stream);
+	JsonPackerStringStream(std::stringstream &input_stream, std::stringstream &output_stream);
 
 	std::istream &InputStream() override;
 	std::ostream &OutputStream() override;
 private:
-	std::istringstream& m_input_stream;
-	std::ostringstream& m_output_stream;
+	std::stringstream& m_input_stream;
+	std::stringstream& m_output_stream;
 };
 
 } // end of namespace jsonpacker_stream
