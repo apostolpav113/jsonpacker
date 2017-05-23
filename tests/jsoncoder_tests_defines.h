@@ -2,7 +2,7 @@
 #define JSONCODER_TESTS_DEFINES_H
 
 #define JSON_RECORDS_VALID {\
-	"{\"key1\":\"value\", \"key2\":42, \"key3\":TRUE}",\
+	"{\"key1\":\"value\", \"key2\":42, \"key3\":true}",\
 	"{\"sadsf\":\"dsewtew\", \"dsre\":3221, \"sdfds\":\"dsfewew\"}"\
 }
 
@@ -10,26 +10,26 @@
 #define DICTIONARY_VALID {{"key1", 1},{"key2", 2},{"key3", 3},{"sadsf", 4},{"dsre", 5},{"sdfds", 6}}
 
 #define JSON_RECORDS_VALID_ALL_DATATYPES {\
-	"{\"key1\":\"value\", \"key2\":42, \"key3\":TRUE}",\
+	"{\"key1\":\"value\", \"key2\":42, \"key3\":true}",\
 	"{\"sadsf\":\"dsewtew\", \"dsre\":3221, \"sdfds\":\"dsfewew\"}",\
 	"{\"key1\": null, \"key2\":\"somestr\", \"key3\": 1.234, \"key4\": 123445, \"key5\": true, \"key6\": FALSE}"\
 }
 
 //key2:42 must be "key2":42
 #define JSON_RECORDS_INVALID_KEY_NAME {\
-	"{\"key1\":\"value\", key2:42, \"key3\":TRUE}",\
+	"{\"key1\":\"value\", key2:42, \"key3\":true}",\
 	"{\"sadsf\":\"dsewtew\", \"dsre\":3221, \"sdfds\":\"dsfewew\"}"\
 }
 
 //"key1":value must be "key1":"value"
 #define JSON_RECORDS_INVALID_VALUE {\
-	"{\"key1\":value, \"key2\":42, \"key3\":TRUE}",\
+	"{\"key1\":value, \"key2\":42, \"key3\":true}",\
 	"{\"sadsf\":\"dsewtew\", \"dsre\":3221, \"sdfds\":\"dsfewew\"}"\
 }
 
 //"sadsf" must have value
 #define JSON_RECORDS_INVALID_WITHOUT_VALUE {\
-	"{\"key1\":\"value\", \"key2\":42, \"key3\":TRUE}",\
+	"{\"key1\":\"value\", \"key2\":42, \"key3\":true}",\
 	"{\"sadsf\":, \"dsre\":3221, \"sdfds\":\"dsfewew\"}"\
 }
 
