@@ -94,7 +94,7 @@ public:
 	  @brief 'method' argument - is used to determine the file processing mode (either 'JSON to TLV' conversion or 'TLV to JSON');
 			  possible values: json2tlv (default), tlv2json
 	  **/
-	ApplicationOption Method {this, "method", "m", "Input file convertion method. Default value is json2tlv. You can use alse tlv2json to unpack binary data.", true, "json2tlv"};
+	ApplicationOption Method {this, "method", "m", "Input file convertion method. Default value is json2tlv. You can use also tlv2json to unpack binary data.", true, "json2tlv"};
 	/**
 	  @brief 'input' argument - the input file name; must be the valid name of file containing data in format depending on value of 'method' argument;
 			  if 'method' is json2tlv input file must comtain valid JSON-records separated by new line;
