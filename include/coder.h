@@ -270,7 +270,7 @@ public:
 
 	/**
 	 * @brief GetJsonValue convert TLV-record to RapidJson value
-	 * @param allocator memory allocator (is used with string values)
+	 * @param allocator[in] memory allocator (is used with string values)
 	 * @return RapidJson value
 	 */
 	rapidjson::Value GetJsonValue(rapidjson::Document::AllocatorType& allocator) {
