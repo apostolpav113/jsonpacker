@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/apostol/c++/JsonPacker
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -77,6 +66,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named build-time-make-directory
+
+# Build rule for target.
+build-time-make-directory: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 build-time-make-directory
+.PHONY : build-time-make-directory
+
+# fast build rule for target.
+build-time-make-directory/fast:
+	$(MAKE) -f CMakeFiles/build-time-make-directory.dir/build.make CMakeFiles/build-time-make-directory.dir/build
+.PHONY : build-time-make-directory/fast
+
+#=============================================================================
 # Target rules for targets named json_packer
 
 # Build rule for target.
@@ -142,8 +155,9 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... build-time-make-directory"
 	@echo "... json_packer"
 	@echo "... json_packer_tests"
 .PHONY : help
