@@ -12,7 +12,7 @@
 #define JSON_RECORDS_VALID_ALL_DATATYPES {\
 	"{\"key1\":\"value\", \"key2\":42, \"key3\":true}",\
 	"{\"sadsf\":\"dsewtew\", \"dsre\":3221, \"sdfds\":\"dsfewew\"}",\
-	"{\"key1\": null, \"key2\":\"somestr\", \"key3\": 1.234, \"key4\": 123445, \"key5\": true, \"key6\": FALSE}"\
+	"{\"key1\": null, \"key2\":\"somestr\", \"key3\": 1.234, \"key4\": 123445, \"key5\": true, \"key6\": false}"\
 }
 
 //key2:42 must be "key2":42
